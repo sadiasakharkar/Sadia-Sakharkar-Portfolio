@@ -133,20 +133,45 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Hero Section
 st.markdown("""
+    <style>
+        /* Ensure the section content adapts to different screen sizes */
+        .section-content {
+            max-width: 90%; /* Adjust width to fit mobile screens */
+            margin: auto; /* Center the content */
+            padding: 10px; /* Add padding to avoid touching screen edges */
+        }
+        /* Flexbox adjustment for small screens */
+        @media only screen and (max-width: 600px) {
+            .big-font {
+                font-size: 24px; /* Decrease font size on small screens */
+                text-align: center; /* Center align text */
+            }
+            .section-content p {
+                font-size: 16px; /* Decrease paragraph font size */
+                text-align: justify; /* Justify text to avoid splitting */
+            }
+            .btn {
+                display: block; /* Buttons on mobile should be stacked */
+                width: 100%;
+                margin-top: 10px; /* Space between buttons */
+            }
+        }
+    </style>
+    
     <div id="home" class="section-content">
         <div style="display: flex; flex-direction: column; align-items: center;">
             <h1 class="big-font">Welcome to My Portfolio!</h1>
             <p>Hello! I'm Sadia Sakharkar, a passionate developer dedicated to crafting innovative solutions and exploring the latest technologies. From building sleek and user-friendly interfaces to diving into the world of AI and machine learning, my goal is to create impactful experiences and drive technological advancement.</p>
             <p>Feel free to browse through my skills, learn about my hobbies, and get to know my mission and the resources I recommend. If you have any questions or just want to connect, don’t hesitate to reach out!</p>
             <div style="margin-top: 20px;">
-                <a href="mailto:sakharkarsadia@gmail.comsubject=Request for Resume" class="btn">Request Resume via Email</a>
+                <a href="mailto:sakharkarsadia@gmail.com?subject=Request for Resume" class="btn">Request Resume via Email</a>
                 <a href="https://github.com/sadiasakharkar" target="_blank" class="btn">Visit Github</a>
             </div>
         </div>
     </div>
 """, unsafe_allow_html=True)
+
 
 st.markdown("<hr>", unsafe_allow_html=True)
 
